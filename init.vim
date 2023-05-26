@@ -41,7 +41,7 @@ call plug#end()
 
 colorscheme gruvbox
 
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\\<TAB>"
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 
