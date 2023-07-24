@@ -53,8 +53,6 @@ nnoremap .th <cmd>help nvim-tree.view.mappings<cr>
 nnoremap <C-p> :tabn<CR>
 nnoremap <C-o> :tabp<CR>
 nnoremap <C-c> :tabc<CR>
-nnoremap ,ff <cmd>Telescope find_files<cr>
-nnoremap ,fg <cmd>Telescope live_grep<cr>
 nnoremap .mp <cmd>MarkdownPreview<cr>
 
 " Float term config
