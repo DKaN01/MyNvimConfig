@@ -37,7 +37,7 @@ Plug 'voldikss/vim-floaterm'
 
 Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
-Plug 'romgrk/barbar.nvim'
+"Plug 'romgrk/barbar.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'nvim-lua/plenary.nvim'
@@ -65,5 +65,6 @@ hi DiagnosticInfo  guifg=White
 hi DiagnosticHint  guifg=White
 
 let g:airline_theme = 'catppuccin'
+let g:airline#extensions#tabline#enabled = 1
 
 lua require('init')
