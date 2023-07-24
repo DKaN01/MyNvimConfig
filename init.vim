@@ -24,8 +24,8 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
-"Plug 'preservim/nerdtree'
+"Plug 'nvim-tree/nvim-tree.lua'
+Plug 'preservim/nerdtree'
 Plug 'xiyaowong/nvim-transparent'
 Plug 'bmatcuk/stylelint-lsp'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -47,8 +47,8 @@ call plug#end()
 colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
-"nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-e> :NvimTreeToggle<cr>
+nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-e> :NvimTreeToggle<cr>
 nnoremap .th <cmd>help nvim-tree.view.mappings<cr>
 nnoremap <C-p> :tabn<CR>
 nnoremap <C-o> :tabp<CR>
