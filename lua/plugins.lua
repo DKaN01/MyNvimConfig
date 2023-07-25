@@ -1,5 +1,9 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+
+	--Icons
+	use 'ryanoasis/vim-devicons'
+
 	--Tree
 	use 'preservim/nerdtree'
 
@@ -27,5 +31,6 @@ return require('packer').startup(function(use)
 
 	--Git status
 	use 'lewis6991/gitsigns.nvim'
+	use 'Xuyuanp/nerdtree-git-plugin'
 end)
 

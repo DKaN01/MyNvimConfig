@@ -70,6 +70,9 @@ vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline_theme'] = 'catppuccin'
 vim.cmd.colorscheme "catppuccin"
 
+vim.g['NERDTreeGitStatusUseNerdFonts'] = 1
+vim.g['NERDTreeGitStatusShowIgnored'] = 1
+
 require('gitsigns').setup {
   signs = {
     add          = { text = '│' },
