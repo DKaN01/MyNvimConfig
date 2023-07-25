@@ -1,17 +1,15 @@
--- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
--- empty setup using defaults
--- require("nvim-tree").setup()
 
 
 local latte = require("catppuccin.palettes").get_palette "latte"
 local frappe = require("catppuccin.palettes").get_palette "frappe"
 local macchiato = require("catppuccin.palettes").get_palette "macchiato"
 local mocha = require("catppuccin.palettes").get_palette "mocha"
+
+
+require("colorizer").setup()
 
 require("catppuccin").setup({
   flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -99,9 +97,6 @@ require("catppuccin").setup({
   },
 })
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
 vim.g.barbar_auto_setup = true -- disable auto-setup
 
 require('gitsigns').setup {
@@ -145,6 +140,7 @@ require('gitsigns').setup {
     enable = false
   },
 }
+
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
