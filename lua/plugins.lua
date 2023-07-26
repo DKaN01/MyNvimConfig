@@ -1,8 +1,6 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
-	--barbar
-	use 'romgrk/barbar.nvim'
 	--Icons
 	use 'ryanoasis/vim-devicons'
   use 'nvim-tree/nvim-web-devicons'
@@ -24,6 +22,7 @@ return require('packer').startup(function(use)
 	--Telescope
 	use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
 
 	--Catppuccin
 	use { "catppuccin/nvim", as = "catppuccin" }
