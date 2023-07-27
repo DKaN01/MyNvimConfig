@@ -1,6 +1,9 @@
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+  --Float term
+	use 'voldikss/vim-floaterm'
+
 	--Icons
 	use 'ryanoasis/vim-devicons'
   use 'nvim-tree/nvim-web-devicons'
