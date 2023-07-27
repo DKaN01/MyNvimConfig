@@ -2,7 +2,10 @@ local opts = {  noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Float terminal
-keymap("n", "<leader>t", ":FloatermToggle!<CR>", opts)
+keymap("n", "<leader>t", ":FloatermNew<CR>", opts)
+
+--Mason
+keymap("n", ".pm", ":Mason<CR>", opts)
 
 --Tabs
 keymap("n", "<C-p>", ":tabn<CR>", opts)
