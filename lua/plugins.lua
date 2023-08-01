@@ -2,7 +2,8 @@ require("lazy").setup({
   --Float term
 	'voldikss/vim-floaterm',
 	--Tree
-	'preservim/nerdtree',
+	--'preservim/nerdtree',
+	'nvim-tree/nvim-tree.lua',
 	-- Completion
 	'hrsh7th/nvim-cmp',
 	'vim-scripts/delimitMate.vim',
