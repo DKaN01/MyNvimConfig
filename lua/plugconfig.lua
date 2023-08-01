@@ -1,5 +1,4 @@
 --Theme catppuccin
-
 local latte = require("catppuccin.palettes").get_palette "latte"
 local frappe = require("catppuccin.palettes").get_palette "frappe"
 local macchiato = require("catppuccin.palettes").get_palette "macchiato"
@@ -58,13 +57,8 @@ require("catppuccin").setup({
 })
 
 -- setup must be called before loading
-
---vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline_theme'] = 'catppuccin'
 vim.cmd.colorscheme "catppuccin"
-
-vim.g['NERDTreeGitStatusUseNerdFonts'] = 1
-vim.g['NERDTreeGitStatusShowIgnored'] = 1
 
 require('gitsigns').setup {
   signs = {

@@ -1,13 +1,11 @@
 require("lazy").setup({
-	--Float term
+  --Float term
 	'voldikss/vim-floaterm',
-	--Icons
-	'ryanoasis/vim-devicons',
-	'nvim-tree/nvim-web-devicons',
 	--Tree
 	'preservim/nerdtree',
 	-- Completion
 	'hrsh7th/nvim-cmp',
+	'vim-scripts/delimitMate.vim',
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-vsnip',
 	'hrsh7th/vim-vsnip',
@@ -26,4 +24,6 @@ require("lazy").setup({
 	'vim-airline/vim-airline-themes',
 	--Git status
 	'lewis6991/gitsigns.nvim',
+	--Icons
+	'nvim-tree/nvim-web-devicons',
 })
