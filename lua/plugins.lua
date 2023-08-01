@@ -1,41 +1,29 @@
-return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-
-  --Float term
-	use 'voldikss/vim-floaterm'
-
+require("lazy").setup({
+	--Float term
+	'voldikss/vim-floaterm',
 	--Icons
-	use 'ryanoasis/vim-devicons'
-  use 'nvim-tree/nvim-web-devicons'
-
+	'ryanoasis/vim-devicons',
+	'nvim-tree/nvim-web-devicons',
 	--Tree
-	use 'preservim/nerdtree'
-
+	'preservim/nerdtree',
 	-- Completion
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip'
-
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
+	'hrsh7th/cmp-vsnip',
+	'hrsh7th/vim-vsnip',
 	--Mason package manager
-	use	'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'neovim/nvim-lspconfig'
-
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
+	'neovim/nvim-lspconfig',
 	--Telescope
-	use 'nvim-telescope/telescope.nvim'
-  use 'nvim-lua/plenary.nvim'
-	use 'nvim-treesitter/nvim-treesitter'
-
+	'nvim-telescope/telescope.nvim',
+	'nvim-lua/plenary.nvim',
+	'nvim-treesitter/nvim-treesitter',
 	--Catppuccin
-	use { "catppuccin/nvim", as = "catppuccin" }
-
-  --Vimairline
-	use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
-
+	{ "catppuccin/nvim", as = "catppuccin" },
+	--Vimairline
+	'vim-airline/vim-airline',
+	'vim-airline/vim-airline-themes',
 	--Git status
-	use 'lewis6991/gitsigns.nvim'
-	use 'Xuyuanp/nerdtree-git-plugin'
-end)
-
+	'lewis6991/gitsigns.nvim',
+})
