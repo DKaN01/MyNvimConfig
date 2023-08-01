@@ -16,5 +16,4 @@ require('plugins')
 require('keymaps')
 require('completion')
 require('plugconfig')
-
-require('loader_c')
+require('serverlsp')

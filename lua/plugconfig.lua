@@ -8,23 +8,6 @@ local mocha = require("catppuccin.palettes").get_palette "mocha"
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-require("mason-lspconfig").setup_handlers {
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
-						  on_attach = function(client, bufnr)
-								vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = bufnr, desc = "Go to Declaration" })
-								vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to Definition" })
-								vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = bufnr, desc = "Go to Implementation" })
-								vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Symbol References" })
-								vim.keymap.set("n", "dp", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "Go to Next Diagnostic" })
-								vim.keymap.set("n", "do", vim.diagnostic.open_float, { buffer = bufnr, desc = "Open Diagnostic Float" })
-								vim.keymap.set("n", "dp", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
-						end,
-				}
-    end,
-}
-
-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
