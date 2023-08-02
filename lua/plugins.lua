@@ -4,7 +4,9 @@ require("lazy").setup({
 	--Tree
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
+	'tpope/vim-surround',
 	'hrsh7th/nvim-cmp',
+  'mattn/emmet-vim',
 	'vim-scripts/delimitMate.vim',
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-vsnip',
@@ -32,4 +34,8 @@ require("lazy").setup({
 						vim.fn["mkdp#util#install"]()
 				end
 	},
+	--LiveServer
+	{'barrett-ruth/live-server.nvim',
+		build = 'yarn global add live-server',
+	}
 })
