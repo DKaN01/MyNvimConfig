@@ -27,5 +27,9 @@ require("lazy").setup({
 	--Icons
 	'nvim-tree/nvim-web-devicons',
   --Markdown Preview
-	'iamcco/markdown-preview.nvim'
+	{'iamcco/markdown-preview.nvim',
+				config = function ()
+						vim.fn["mkdp#util#install"]()
+				end
+	},
 })
