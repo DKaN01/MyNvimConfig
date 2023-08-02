@@ -17,7 +17,3 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 --Markdown Preview
 keymap("n", ".mp", ":MarkdownPreview<CR>", opts)
-
---LiveServer
-keymap("n", ".lr", ":LiveServerStart<CR>", opts)
-keymap("n", ".ls", ":LiveServerStop<CR>", opts)
