@@ -2,7 +2,6 @@ require("lazy").setup({
   --Float term
 	'voldikss/vim-floaterm',
 	--Tree
-	--'preservim/nerdtree',
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
 	'hrsh7th/nvim-cmp',
@@ -27,4 +26,6 @@ require("lazy").setup({
 	'lewis6991/gitsigns.nvim',
 	--Icons
 	'nvim-tree/nvim-web-devicons',
+  --Markdown Preview
+	'iamcco/markdown-preview.nvim'
 })

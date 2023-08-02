@@ -55,7 +55,7 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
+        comments = { "bold" }, -- Change the style of comments
         conditionals = { "italic" },
         loops = {},
         functions = {},
