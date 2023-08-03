@@ -1,3 +1,4 @@
+require('nvim-ts-autotag').setup()
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -81,7 +82,6 @@ require("catppuccin").setup({
 })
 
 -- setup must be called before loading
-vim.g['airline_theme'] = 'catppuccin'
 vim.cmd.colorscheme "catppuccin"
 
 require('gitsigns').setup {

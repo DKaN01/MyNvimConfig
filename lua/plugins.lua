@@ -4,6 +4,8 @@ require("lazy").setup({
 	--Tree
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
+	'onsails/lspkind.nvim',
+	'windwp/nvim-ts-autotag',
 	'tpope/vim-surround',
 	'hrsh7th/nvim-cmp',
 	'vim-scripts/delimitMate.vim',
@@ -20,9 +22,8 @@ require("lazy").setup({
 	'nvim-treesitter/nvim-treesitter',
 	--Catppuccin
 	{ "catppuccin/nvim", as = "catppuccin" },
-	--Vimairline
-	'vim-airline/vim-airline',
-	'vim-airline/vim-airline-themes',
+	--DownLine
+	'nvim-lualine/lualine.nvim',
 	--Git status
 	'lewis6991/gitsigns.nvim',
 	--Icons

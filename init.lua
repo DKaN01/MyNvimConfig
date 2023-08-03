@@ -31,6 +31,7 @@ vim.opt.rtp:prepend(lazypath)
 --Block
 require('plugins')
 require('plugconfig')
+require('lualinecfg')
 require('serverlsp')
 require('completion')
 require('keymaps')
