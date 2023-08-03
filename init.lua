@@ -10,9 +10,7 @@ opt.splitright = true
 opt.splitbelow = true
 opt.backup = false
 opt.encoding = "utf-8"
---Setup leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+
 
 --Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
