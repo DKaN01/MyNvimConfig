@@ -19,6 +19,7 @@ require("lazy").setup({
 	--Telescope
 	'nvim-telescope/telescope.nvim',
 	'nvim-lua/plenary.nvim',
+	--Treesitter
 	'nvim-treesitter/nvim-treesitter',
 	--Catppuccin
 	{ "catppuccin/nvim", as = "catppuccin" },
