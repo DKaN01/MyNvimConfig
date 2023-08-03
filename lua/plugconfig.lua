@@ -75,10 +75,10 @@ require("catppuccin").setup({
         cmp = true,
         gitsigns = true,
         treesitter = true,
+
     },
 })
 
--- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
 
 require('gitsigns').setup {
