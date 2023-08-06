@@ -1,8 +1,10 @@
 -- Config main neovim
 local opt = vim.opt
 vim.wo.number = true -- Show numbers
+opt.expandtab = true
+opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.tabstop = 2
+opt.tabstop = 4
 opt.smartindent = true
 opt.clipboard = 'unnamedplus'
 opt.completeopt = 'menuone,noselect'
