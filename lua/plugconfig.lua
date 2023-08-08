@@ -124,7 +124,7 @@ require('gitsigns').setup {
 }
 
 require('nvim-treesitter.configs').setup {
-    encure_installed = "maintained",
+    ensure_installed = {"c","lua","python","html"},
     highlight = {
         enable = true,
     },
