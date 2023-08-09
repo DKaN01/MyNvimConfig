@@ -1,5 +1,9 @@
 require("lazy").setup({
-  --Float term
+    --ColorPicker
+    'ziontee113/color-picker.nvim',
+    --Prettier
+    {'prettier/vim-prettier', build='yarn install --frozen-lockfile --production'},
+    --Float term
 	'voldikss/vim-floaterm',
 	--Tree
 	'nvim-tree/nvim-tree.lua',
@@ -29,7 +33,7 @@ require("lazy").setup({
 	'lewis6991/gitsigns.nvim',
 	--Icons
 	'nvim-tree/nvim-web-devicons',
-  --Markdown Preview
+    --Markdown Preview
 	{'iamcco/markdown-preview.nvim',
 				config = function ()
 						vim.fn["mkdp#util#install"]()
