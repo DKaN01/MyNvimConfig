@@ -23,6 +23,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.o.background = "dark"
 
 -- empty setup using defaults
 require("nvim-tree").setup()

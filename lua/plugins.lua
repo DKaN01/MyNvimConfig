@@ -24,9 +24,9 @@ require("lazy").setup({
 	'nvim-telescope/telescope.nvim',
 	'nvim-lua/plenary.nvim',
 	--Treesitter
-	'nvim-treesitter/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter',
 	--Catppuccin
-	{ "catppuccin/nvim", as = "catppuccin" },
+    { "catppuccin/nvim", as = "catppuccin" },
 	--DownLine
 	'nvim-lualine/lualine.nvim',
 	--Git status
