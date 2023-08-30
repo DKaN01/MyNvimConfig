@@ -25,7 +25,9 @@ require("lazy").setup({
 	'nvim-lua/plenary.nvim',
 	--Treesitter
     'nvim-treesitter/nvim-treesitter',
-	--Catppuccin
+    --Gruvbox
+    'morhetz/gruvbox',
+    --Catppuccin
     { "catppuccin/nvim", as = "catppuccin" },
 	--DownLine
 	'nvim-lualine/lualine.nvim',
