@@ -1,22 +1,3 @@
-require("color-picker").setup({ -- for changing icons & mappings
-	-- ["icons"] = { "ﱢ", "" },
-	-- ["icons"] = { "ﮊ", "" },
-	-- ["icons"] = { "", "ﰕ" },
-	-- ["icons"] = { "", "" },
-	-- ["icons"] = { "", "" },
-	["icons"] = { "ﱢ", "" },
-	["border"] = "rounded", -- none | single | double | rounded | solid | shadow
-	["keymap"] = { -- mapping example:
-		["U"] = "<Plug>ColorPickerSlider5Decrease",
-		["O"] = "<Plug>ColorPickerSlider5Increase",
-	},
-	["background_highlight_group"] = "Normal", -- default
-	["border_highlight_group"] = "FloatBorder", -- default
-  ["text_highlight_group"] = "Normal", --default
-})
-
-vim.cmd([[hi FloatBorder guibg=NONE]]) -- if you don't want weird border background colors around the popup.
-require('nvim-ts-autotag').setup()
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -24,9 +5,6 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 vim.o.background = "dark"
-
--- empty setup using defaults
-require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
@@ -41,12 +19,6 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-
---Theme catppuccin
-local latte = require("catppuccin.palettes").get_palette "latte"
-local frappe = require("catppuccin.palettes").get_palette "frappe"
-local macchiato = require("catppuccin.palettes").get_palette "macchiato"
-local mocha = require("catppuccin.palettes").get_palette "mocha"
 
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -98,7 +70,8 @@ require("catppuccin").setup({
     },
 })
 
-vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "gruvbox"
 
 require('gitsigns').setup {
   signs = {
