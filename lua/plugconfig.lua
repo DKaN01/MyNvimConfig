@@ -1,12 +1,10 @@
--- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 vim.o.background = "dark"
 
--- OR setup with some options
+
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -30,24 +28,24 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
+    flavour = "mocha",
+    background = {
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
-    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    transparent_background = false,
+    show_end_of_buffer = false,
+    term_colors = false,
     dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
+        enabled = false,
         shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+        percentage = 0.15,
     },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
-    no_underline = false, -- Force no underline
-    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "bold" }, -- Change the style of comments
+    no_italic = false,
+    no_bold = false,
+    no_underline = false,
+    styles = {
+        comments = { "bold" },
         conditionals = { "italic" },
         loops = {},
         functions = {},
@@ -70,8 +68,8 @@ require("catppuccin").setup({
     },
 })
 
---vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme "gruvbox"
+vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "gruvbox"
 
 require('gitsigns').setup {
   signs = {
@@ -82,28 +80,27 @@ require('gitsigns').setup {
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
   },
-  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
-  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  signcolumn = true,
+  numhl      = false,
+  linehl     = false,
+  word_diff  = false,
   watch_gitdir = {
     follow_files = true
   },
   attach_to_untracked = true,
-  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  current_line_blame = false,
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    virt_text_pos = 'eol',
     delay = 1000,
     ignore_whitespace = false,
   },
   current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
   sign_priority = 6,
   update_debounce = 100,
-  status_formatter = nil, -- Use default
-  max_file_length = 40000, -- Disable if file is longer than this (in lines)
+  status_formatter = nil,
+  max_file_length = 40000,
   preview_config = {
-    -- Options passed to nvim_open_win
     border = 'single',
     style = 'minimal',
     relative = 'cursor',
