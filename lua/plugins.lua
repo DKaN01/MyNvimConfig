@@ -5,9 +5,12 @@ require("lazy").setup({
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
     'onsails/lspkind.nvim',
-    'tpope/vim-surround',
+    {'altermo/ultimate-autopair.nvim',
+        event={'InsertEnter','CmdlineEnter'},
+        branch='v0.6',
+        opts={},
+    },
 	'hrsh7th/nvim-cmp',
-	'vim-scripts/delimitMate.vim',
 	'hrsh7th/cmp-nvim-lsp',
 	--Mason package manager
 	'williamboman/mason.nvim',
@@ -26,6 +29,9 @@ require("lazy").setup({
 	'nvim-lualine/lualine.nvim',
 	--Git status
 	'lewis6991/gitsigns.nvim',
-	--Icons
+	--Other
+    'rcarriga/nvim-notify',
+    'numToStr/Comment.nvim',
+    --Icons
 	'nvim-tree/nvim-web-devicons',
 })

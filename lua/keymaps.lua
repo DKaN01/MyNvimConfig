@@ -8,6 +8,8 @@
 --.pm (normal mode) = Open mason (lsp manager)
 --\ff = telescope files
 --\fg = telescope grep
+--gcc (normal mode) = Comment line
+--gc (visual mode) = Comment
 
 
 vim.g.mapleader = " "
