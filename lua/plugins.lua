@@ -5,11 +5,6 @@ require("lazy").setup({
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
     'onsails/lspkind.nvim',
-    {'altermo/ultimate-autopair.nvim',
-        event={'InsertEnter','CmdlineEnter'},
-        branch='v0.6',
-        opts={},
-    },
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-nvim-lsp',
 	--Mason package manager
