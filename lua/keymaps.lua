@@ -1,9 +1,10 @@
 --Keymap
---Ctrl + p (normal mode) = Next tab
---Ctrl + o (normal mode) = Prev tab
---Ctrl + c (normal mode) = Close tab
+
+--Alt + . (normal mode) = Next tab
+--Alt + , (normal mode) = Prev tab
+--Alt + c (normal mode) = Close tab
+--Alt + p (normal mode) = Pinned tab
 --Space + e (normal mode) = Toggle tree, open or close
---Ctrl + t (in tree) = Open new tab
 --Space + t (normal mode) = Open float terminal
 --.pm (normal mode) = Open mason (lsp manager)
 --\ff = telescope files
@@ -26,9 +27,10 @@ keymap("n", "<leader>t", ":FloatermNew<CR>", opts)
 keymap("n", ".pm", ":Mason<CR>", opts)
 
 --Tabs
-keymap("n", "<C-p>", ":tabn<CR>", opts)
-keymap("n", "<C-o>", ":tabp<CR>", opts)
-keymap("n", "<C-c>", ":tabc<CR>", opts)
+keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
+keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 
 --Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
