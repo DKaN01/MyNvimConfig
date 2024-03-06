@@ -111,5 +111,8 @@ require('nvim-treesitter.configs').setup {
         enable = true,
     }
 }
+require('outline').setup({
+
+})
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

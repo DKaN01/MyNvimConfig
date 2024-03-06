@@ -31,6 +31,8 @@ require("lazy").setup({
     'neanias/everforest-nvim',
     'rebelot/kanagawa.nvim',
     'AlexvZyl/nordic.nvim',
+    --Outline
+    "hedyhli/outline.nvim",
     --Barbar
     {'romgrk/barbar.nvim',
         dependencies = {
