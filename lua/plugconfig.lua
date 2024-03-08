@@ -57,8 +57,6 @@ require('kanagawa').setup({
         light = "lotus"
     },
 })
---vim.cmd.colorscheme "gruvbox"
-
 
 
 require('gitsigns').setup {
