@@ -28,6 +28,7 @@ require("lazy").setup({
     --Icons
 	'nvim-tree/nvim-web-devicons',
     --Themes
+    {'catppuccin/nvim', name='catppuccin', priority=1000},
     'neanias/everforest-nvim',
     'rebelot/kanagawa.nvim',
     'AlexvZyl/nordic.nvim',

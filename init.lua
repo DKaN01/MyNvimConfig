@@ -1,5 +1,6 @@
 -- Config main neovim
 local opt = vim.opt
+opt.swapfile = false
 vim.wo.number = true -- Show numbers
 opt.expandtab = true
 opt.softtabstop = 4
