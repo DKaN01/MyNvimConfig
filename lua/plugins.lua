@@ -34,6 +34,23 @@ require("lazy").setup({
     'AlexvZyl/nordic.nvim',
     --Outline
     "hedyhli/outline.nvim",
+    --Obsidian
+    {
+        'epwalsh/obsidian.nvim',
+        lazy = true,
+        ft = 'markdown',
+        dependencies = {
+            'nvim-lua/plenary.nvim'
+        },
+        opts = {
+            workspaces = {
+                {
+                    name = "personal",
+                    path = "~/vaults/personal"
+                },
+            },
+        },
+    },
     --Barbar
     {'romgrk/barbar.nvim',
         dependencies = {
