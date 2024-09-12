@@ -1,5 +1,6 @@
 -- Config main neovim
 local opt = vim.opt
+local wo = vim.wo
 opt.swapfile = false
 vim.wo.number = true -- Show numbers
 opt.expandtab = true
@@ -13,6 +14,10 @@ opt.splitright = true
 opt.splitbelow = true
 opt.backup = false
 opt.encoding = "utf-8"
+opt.ttyfast = true
+opt.mouse = a
+opt.clipboard = unnamedplus
+wo.relativenumber = true
 
 
 --Lazy

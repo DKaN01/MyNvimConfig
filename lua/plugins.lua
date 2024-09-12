@@ -67,5 +67,13 @@ require("lazy").setup({
             tabpages = true,
         },
         version = '^1.0.0', -- optional: only update when a new 1.x version is released
-  },
+    },
+    {
+        'altermo/ultimate-autopair.nvim',
+        event={'InsertEnter','CmdlineEnter'},
+        branch='v0.6', --recommended as each new version will have breaking changes
+        opts={
+        --Config goes here
+        },
+    }
 })
