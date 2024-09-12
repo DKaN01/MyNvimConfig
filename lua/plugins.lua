@@ -34,23 +34,6 @@ require("lazy").setup({
     'AlexvZyl/nordic.nvim',
     --Outline
     "hedyhli/outline.nvim",
-    --Obsidian
-    {
-        'epwalsh/obsidian.nvim',
-        lazy = true,
-        ft = 'markdown',
-        dependencies = {
-            'nvim-lua/plenary.nvim'
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "personal",
-                    path = "~/vaults/personal"
-                },
-            },
-        },
-    },
     --Barbar
     {'romgrk/barbar.nvim',
         dependencies = {
@@ -75,5 +58,18 @@ require("lazy").setup({
         opts={
         --Config goes here
         },
+    },
+    {
+      "NeogitOrg/neogit",
+      dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+        "sindrets/diffview.nvim",        -- optional - Diff integration
+
+        -- Only one of these is needed, not both.
+        "nvim-telescope/telescope.nvim", -- optional
+        "ibhagwan/fzf-lua",              -- optional
+      },
+      config = true
     }
+
 })
