@@ -134,8 +134,10 @@ require('nvim-treesitter.configs').setup {
         enable = true,
     }
 }
-require('outline').setup({
 
-})
+require("toggleterm").setup {
+   shell = vim.o.shell,
+   auto_scroll = true
+}
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

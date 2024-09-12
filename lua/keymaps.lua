@@ -21,8 +21,8 @@ vim.g.maplocalleader = " "
 local opts = {  noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
---Float terminal
-keymap("n", "<leader>t", ":FloatermNew<CR>", opts)
+--Terminal
+keymap("n", "<leader>t", ":ToggleTerm size=40 direction=horizontal name=terminal<CR>", opts)
 
 --Mason
 keymap("n", ".pm", ":Mason<CR>", opts)

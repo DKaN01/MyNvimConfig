@@ -1,6 +1,6 @@
 require("lazy").setup({
-    --Float term
-	'voldikss/vim-floaterm',
+    --Term
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 	--Tree
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
