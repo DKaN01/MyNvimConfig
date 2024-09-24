@@ -8,6 +8,13 @@ vim.opt.termguicolors = true
 vim.o.background = "dark"
 
 
+require('ufo').setup({
+    provider_selector = function(bufnr, filetype, buftype)
+        return {'treesitter', 'indent'}
+    end
+})
+
+
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -32,7 +39,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 --Theme
-vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'moonfly'
+--vim.cmd.colorscheme 'catppuccin'
 require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -82,48 +90,6 @@ require("catppuccin").setup({
     },
 })
 
--- setup must be called before loading
-vim.cmd.colorscheme "catppuccin"
-require('gitsigns').setup {
-  signs = {
-    add          = { text = '│' },
-    change       = { text = '│' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-    untracked    = { text = '┆' },
-  },
-  signcolumn = true,
-  numhl      = false,
-  linehl     = false,
-  word_diff  = false,
-  watch_gitdir = {
-    follow_files = true
-  },
-  attach_to_untracked = true,
-  current_line_blame = false,
-  current_line_blame_opts = {
-    virt_text = true,
-    virt_text_pos = 'eol',
-    delay = 1000,
-    ignore_whitespace = false,
-  },
-  current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
-  sign_priority = 6,
-  update_debounce = 100,
-  status_formatter = nil,
-  max_file_length = 40000,
-  preview_config = {
-    border = 'single',
-    style = 'minimal',
-    relative = 'cursor',
-    row = 0,
-    col = 1
-  },
-  yadm = {
-		enable = false
-  },
-}
 
 require('nvim-treesitter.configs').setup {
     ensure_installed = {"c","lua","python","html"},

@@ -1,4 +1,5 @@
 require("lazy").setup({
+    'nanotee/zoxide.vim',
     --Float term
 	'voldikss/vim-floaterm',
 	--Tree
@@ -32,6 +33,7 @@ require("lazy").setup({
     'neanias/everforest-nvim',
     'rebelot/kanagawa.nvim',
     'AlexvZyl/nordic.nvim',
+    'bluz71/vim-moonfly-colors',
     --Outline
     "hedyhli/outline.nvim",
     --Barbar
@@ -70,6 +72,11 @@ require("lazy").setup({
         "ibhagwan/fzf-lua",              -- optional
       },
       config = true
+    },
+    {
+        'kevinhwang91/nvim-ufo',
+        dependencies = {
+            'kevinhwang91/promise-async'
+        }
     }
-
 })

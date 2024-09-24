@@ -18,6 +18,10 @@ opt.ttyfast = true
 opt.mouse = a
 opt.clipboard = unnamedplus
 wo.relativenumber = true
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 
 --Lazy

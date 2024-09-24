@@ -12,6 +12,8 @@
 --\fg = telescope grep
 --gcc (normal mode) = Comment line
 --gc (visual mode) = Comment
+--zR (normal mode) = open folds
+--zM (normal mode) = close folds
 
 
 vim.g.mapleader = " "
@@ -20,6 +22,12 @@ vim.g.maplocalleader = " "
 
 local opts = {  noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
+
+
+--ufo
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+
 
 --Float terminal
 keymap("n", "<leader>t", ":FloatermNew<CR>", opts)
