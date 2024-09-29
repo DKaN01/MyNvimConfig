@@ -39,8 +39,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 --Theme
-vim.cmd.colorscheme 'moonfly'
---vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'catppuccin'
 require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background

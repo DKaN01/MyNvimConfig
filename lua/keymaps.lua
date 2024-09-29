@@ -1,5 +1,7 @@
 --Keymap
 
+--leader = SPACE
+
 --Alt + . (normal mode) = Next tab
 --Alt + , (normal mode) = Prev tab
 --Alt + c (normal mode) = Close tab
@@ -14,6 +16,7 @@
 --gc (visual mode) = Comment
 --zR (normal mode) = open folds
 --zM (normal mode) = close folds
+--<leader>g (normal mode) = lazygit
 
 
 vim.g.mapleader = " "
