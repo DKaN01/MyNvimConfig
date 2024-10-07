@@ -82,6 +82,17 @@ require("lazy").setup({
         --Config goes here
         },
     },
+    {
+      "shellRaining/hlchunk.nvim",
+      event = { "BufReadPre", "BufNewFile" },
+      config = function()
+        require("hlchunk").setup({
+                chunk = {
+                    enable = true
+                }
+            })
+      end
+    },
     --UFO
     {
         'kevinhwang91/nvim-ufo',

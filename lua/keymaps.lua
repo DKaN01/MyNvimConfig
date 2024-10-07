@@ -6,9 +6,9 @@
 --Alt + , (normal mode) = Prev tab
 --Alt + c (normal mode) = Close tab
 --Alt + p (normal mode) = Pinned tab
---Space + o (normal mode) = Toggle outline
---Space + e (normal mode) = Toggle tree
---Space + t (normal mode) = Open float terminal
+--<leader> + o (normal mode) = Toggle outline
+--<leader> + e (normal mode) = Toggle tree
+--<leader> + t (normal mode) = Open float terminal
 --.pm (normal mode) = Open mason (lsp manager)
 --\ff = telescope files
 --\fg = telescope grep
@@ -19,8 +19,8 @@
 --<leader>g (normal mode) = lazygit
 
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 
 local opts = {  noremap = true, silent = true }
