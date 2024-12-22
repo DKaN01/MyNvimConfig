@@ -8,12 +8,14 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "dp", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
 end
 
-local lspconig = require("lspconfig")
+local lspconfig = require("lspconfig")
+local capabilities = require('blink.cmp').get_lsp_capabilities()
 
 require("mason-lspconfig").setup_handlers {
-    function (server_name) -- default handler (optional)
-        lspconig[server_name].setup {
-						  on_attach = on_attach
+    function (server_name)
+        lspconfig[server_name].setup {
+						  on_attach = on_attach,
+                          capabilities = capabilities
 				}
     end,
 }

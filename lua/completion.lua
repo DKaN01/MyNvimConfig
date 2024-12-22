@@ -1,26 +1,37 @@
-local cmp = require("cmp")
-local lspkind = require("lspkind")
-
-cmp.setup({
-    formatting = {
-                format = lspkind.cmp_format({
-                    mode = 'symbol',
-                    maxwidth = 50,
-                    ellipsis_char = '...',
-                    before = function(entry, vim_item)
-                        return vim_item
-                    end
-        })
+require('blink.cmp').setup({
+    keymap = {
+        preset = 'default',
+        ['<Tab>'] = { 'accept' },
+        ['<Up>'] = { 'select_prev', 'fallback' },
+        ['<Down>'] = { 'select_next', 'fallback' },
     },
-    mapping = cmp.mapping.preset.insert({
-				['<C-b>'] = cmp.mapping.scroll_docs(-4),
-				['<C-f>'] = cmp.mapping.scroll_docs(4),
-				['<C-o>'] = cmp.mapping.complete(),
-				['<C-e>'] = cmp.mapping.abort(),
-				['<Tab>'] = cmp.mapping.confirm({ select = true }),
-	}),
-	sources = cmp.config.sources({
-				{ name = 'nvim_lsp' },
-				{ name = 'buffer' },
-	}),
+
+    completion = {
+        accept = {
+          -- experimental auto-brackets support
+          auto_brackets = {
+            enabled = true,
+          },
+        },
+        menu = {
+          draw = {
+            treesitter = { "lsp" },
+          },
+        },
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 100,
+        },
+        ghost_text = {
+          enabled = vim.g.ai_cmp,
+        },
+    },
+
+    appearance = {
+      use_nvim_cmp_as_default = true,
+      nerd_font_variant = 'mono'
+    },
+    sources = {
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
 })

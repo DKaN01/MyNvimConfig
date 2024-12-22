@@ -26,13 +26,14 @@ require("lazy").setup({
 	--Tree
 	'nvim-tree/nvim-tree.lua',
 	-- Completion
-    'onsails/lspkind.nvim',
-	'hrsh7th/nvim-cmp',
-	'hrsh7th/cmp-nvim-lsp',
+    {
+        'saghen/blink.cmp',
+        dependencies = 'rafamadriz/friendly-snippets',
+    },
 	--Mason package manager
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
-	'neovim/nvim-lspconfig',
+    'neovim/nvim-lspconfig',
 	--Telescope
 	'nvim-telescope/telescope.nvim',
 	'nvim-lua/plenary.nvim',
@@ -60,8 +61,8 @@ require("lazy").setup({
     --Barbar
     {'romgrk/barbar.nvim',
         dependencies = {
-            'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+            'lewis6991/gitsigns.nvim',
+            'nvim-tree/nvim-web-devicons',
         },
         init = function() vim.g.barbar_auto_setup = false end,
         opts = {
@@ -72,15 +73,13 @@ require("lazy").setup({
             },
             tabpages = true,
         },
-        version = '^1.0.0', -- optional: only update when a new 1.x version is released
+        version = '^1.0.0',
     },
     {
         'altermo/ultimate-autopair.nvim',
         event={'InsertEnter','CmdlineEnter'},
-        branch='v0.6', --recommended as each new version will have breaking changes
-        opts={
-        --Config goes here
-        },
+        branch='v0.6',
+        opts= {},
     },
     {
       "shellRaining/hlchunk.nvim",
