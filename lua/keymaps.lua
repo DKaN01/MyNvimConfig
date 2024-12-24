@@ -1,6 +1,6 @@
 --Keymap
 
---leader = SPACE
+--leader = \
 
 --Alt + . (normal mode) = Next tab
 --Alt + , (normal mode) = Prev tab
