@@ -28,7 +28,9 @@ require("nvim-tree").setup({
   },
 })
 
-require("mason").setup()
+require("mason").setup({
+    PATH = "append"
+})
 require("mason-lspconfig").setup()
 
 local builtin = require('telescope.builtin')
