@@ -1,15 +1,18 @@
 # Nvim config
 ![LOGO](res/screen.png)
 
-This simple neovim config write only `lua`
+This simple neovim config
 
 ----
 
 ## Dependencies
 * C compiler for `nvim-treesitter`
+* Cargo for `blink.cmp`
 * NodeJS
 * Neovim
 * Git
+* ripgrep
+* lazygit
 
 
 ### How install
@@ -17,6 +20,9 @@ This simple neovim config write only `lua`
     * `AppData/Local/nvim` windows
     * `~/.config/nvim` unix
 * Launch neovim and `lazy` install plugins
+* After need compile `blink.cmp`
+    * go to `lazy/blink.cmp`
+    * run `cargo build --release`
 
 ----
 
