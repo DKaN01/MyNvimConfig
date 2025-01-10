@@ -1,4 +1,6 @@
 require("lazy").setup({
+    --Cmake Tools
+    'Civitasv/cmake-tools.nvim',
     --Lazygit
     {
       "kdheepak/lazygit.nvim",
