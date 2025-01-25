@@ -41,7 +41,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 --Theme
-vim.cmd.colorscheme 'catppuccin'
+--vim.cmd.colorscheme 'catppuccin'
+vim.cmd [[colorscheme moonfly]]
 require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -148,7 +149,7 @@ require("cmake-tools").setup {
         auto_close_when_success = true, -- typically, you can use it with the "always" option; it will auto-close the quickfix buffer if the execution is successful.
       },
       toggleterm = {
-        direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float'
+        direction = "tab", -- 'vertical' | 'horizontal' | 'tab' | 'float'
         close_on_exit = false, -- whether close the terminal when exit
         auto_scroll = true, -- whether auto scroll to the bottom
         singleton = true, -- single instance, autocloses the opened one, if present
@@ -199,7 +200,7 @@ require("cmake-tools").setup {
         auto_close_when_success = true, -- typically, you can use it with the "always" option; it will auto-close the quickfix buffer if the execution is successful.
       },
       toggleterm = {
-        direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float'
+        direction = "tab", -- 'vertical' | 'horizontal' | 'tab' | 'float'
         close_on_exit = false, -- whether close the terminal when exit
         auto_scroll = true, -- whether auto scroll to the bottom
         singleton = true, -- single instance, autocloses the opened one, if present

@@ -53,11 +53,11 @@ require("lazy").setup({
     --Icons
 	'nvim-tree/nvim-web-devicons',
     --Themes
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     {'catppuccin/nvim', name='catppuccin', priority=1000},
     'neanias/everforest-nvim',
     'rebelot/kanagawa.nvim',
     'AlexvZyl/nordic.nvim',
-    'bluz71/vim-moonfly-colors',
     --Outline
     "hedyhli/outline.nvim",
     --Barbar
