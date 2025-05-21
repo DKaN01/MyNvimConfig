@@ -1,3 +1,5 @@
+require("todo-comments").setup()
+
 vim.notify = require("notify")
 require('Comment').setup()
 

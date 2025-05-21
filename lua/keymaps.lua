@@ -44,6 +44,15 @@ keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 
+--Lsp
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = bufnr, desc = "Go to Declaration" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to Definition" })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = bufnr, desc = "Go to Implementation" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Symbol References" })
+vim.keymap.set("n", "dp", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "Go to Next Diagnostic" })
+vim.keymap.set("n", "do", vim.diagnostic.open_float, { buffer = bufnr, desc = "Open Diagnostic Float" })
+vim.keymap.set("n", "dp", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
+
 --Outline
 keymap('n', '<leader>o', '<cmd>Outline<CR>', opts)
 
