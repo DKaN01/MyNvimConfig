@@ -1,4 +1,6 @@
 require("lazy").setup({
+    --TODOS
+    {"folke/todo-comments.nvim", dependencies={"nvim-lua/plenary.nvim"}},
     --Cmake Tools
     'Civitasv/cmake-tools.nvim',
     --Lazygit
@@ -31,7 +33,8 @@ require("lazy").setup({
     {
         'saghen/blink.cmp',
         dependencies = 'rafamadriz/friendly-snippets',
-    },
+        version = "1.*"
+   },
 	--Mason package manager
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
@@ -46,9 +49,9 @@ require("lazy").setup({
 	--DownLine
 	'nvim-lualine/lualine.nvim',
 	--Git status
-	'lewis6991/gitsigns.nvim',
 	--Other
     'rcarriga/nvim-notify',
+    'lewis6991/gitsigns.nvim',
     'numToStr/Comment.nvim',
     --Icons
 	'nvim-tree/nvim-web-devicons',
@@ -64,7 +67,7 @@ require("lazy").setup({
     --Barbar
     {'romgrk/barbar.nvim',
         dependencies = {
-            'lewis6991/gitsigns.nvim',
+--            'lewis6991/gitsigns.nvim',
             'nvim-tree/nvim-web-devicons',
         },
         init = function() vim.g.barbar_auto_setup = false end,
@@ -84,6 +87,7 @@ require("lazy").setup({
         branch='v0.6',
         opts= {},
     },
+    --Other
     {
       "shellRaining/hlchunk.nvim",
       event = { "BufReadPre", "BufNewFile" },

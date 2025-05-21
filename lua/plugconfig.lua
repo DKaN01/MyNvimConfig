@@ -28,11 +28,6 @@ require("nvim-tree").setup({
   },
 })
 
-require("mason").setup({
-    PATH = "append"
-})
-require("mason-lspconfig").setup()
-
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -83,7 +78,6 @@ require("catppuccin").setup({
     default_integrations = true,
     integrations = {
         cmp = true,
-        gitsigns = true,
         nvimtree = true,
         treesitter = true,
         notify = false,
@@ -97,7 +91,7 @@ require("catppuccin").setup({
 
 
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {"c","lua","python","html"},
+    ensure_installed = {"c","lua","python","html", "cpp", "rust", "java"},
     highlight = {
         enable = true,
     },
@@ -246,4 +240,54 @@ require("cmake-tools").setup {
     refresh_rate_ms = 100, -- how often to iterate icons
   },
   cmake_virtual_text_support = true, -- Show the target related to current file using virtual text (at right corner)
+}
+
+require('gitsigns').setup {
+  signs = {
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
+  },
+  signs_staged = {
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
+  },
+  signs_staged_enable = true,
+  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  watch_gitdir = {
+    follow_files = true
+  },
+  auto_attach = true,
+  attach_to_untracked = false,
+  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  current_line_blame_opts = {
+    virt_text = true,
+    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    delay = 1000,
+    ignore_whitespace = false,
+    virt_text_priority = 100,
+    use_focus = true,
+  },
+  current_line_blame_formatter = '<author>, <author_time:%R> - <summary>',
+  sign_priority = 6,
+  update_debounce = 100,
+  status_formatter = nil, -- Use default
+  max_file_length = 40000, -- Disable if file is longer than this (in lines)
+  preview_config = {
+    -- Options passed to nvim_open_win
+    style = 'minimal',
+    relative = 'cursor',
+    row = 0,
+    col = 1
+  },
 }
