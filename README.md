@@ -7,9 +7,8 @@ This simple neovim config
 
 ## Dependencies
 * C compiler for `nvim-treesitter`
-* Cargo for `blink.cmp`
 * NodeJS
-* Neovim
+* Neovim `>=0.11`
 * Git
 * ripgrep
 * lazygit
@@ -19,15 +18,11 @@ This simple neovim config
 * Clone repo to neovim config folder `git clone https://github.com/DKaN01/MyNvimConfig.git <config folder>`
     * `AppData/Local/nvim` windows
     * `~/.config/nvim` unix
-* Launch neovim and `lazy` install plugins
-* After need compile `blink.cmp`
-    * go to `lazy/blink.cmp`
-    * run `cargo build --release`
+* Launch neovim and `lazy` installed plugins
 
 ----
 
 #### Other
 Keymap write in `lua/keymaps.lua`<br>
 Plugin list in `lua/plugins.lua`<br>
-For install lsp write in normal mode `.pm`, find your lsp server and press `i`<br>
 ***Bro just see files***
