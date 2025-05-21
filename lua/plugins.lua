@@ -58,6 +58,7 @@ require("lazy").setup({
     'neanias/everforest-nvim',
     'rebelot/kanagawa.nvim',
     'AlexvZyl/nordic.nvim',
+    'EdenEast/nightfox.nvim',
     --Outline
     "hedyhli/outline.nvim",
     --Barbar

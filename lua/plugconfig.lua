@@ -40,9 +40,12 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
---Theme
+--Themes
+--vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme 'catppuccin'
-vim.cmd [[colorscheme moonfly]]
+--vim.cmd [[colorscheme moonfly]]
+vim.cmd.colorscheme 'carbonfox'
+
 require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
