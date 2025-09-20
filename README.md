@@ -17,11 +17,11 @@ This simple neovim config
 * Clone repo to neovim config folder `git clone https://github.com/DKaN01/MyNvimConfig.git <config folder>`
     * `AppData/Local/nvim` windows
     * `~/.config/nvim` unix
-* Launch neovim and `lazy` installed plugins
+* Launch neovim and `lazy` will be installed plugins
 
 ----
 
 #### Other
-Keymap write in `lua/keymaps.lua`<br>
+Keymaps write in `lua/keymaps.lua`<br>
 Plugin list in `lua/plugins.lua`<br>
 ***Bro just see files***
