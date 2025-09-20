@@ -16,7 +16,7 @@
 --gc (visual mode) = Comment
 --zR (normal mode) = open folds
 --zM (normal mode) = close folds
---<leader>g (normal mode) = lazygit
+--<leader>g (normal mode) = neogit
 
 
 vim.g.mapleader = "\\"
@@ -31,6 +31,8 @@ local keymap = vim.api.nvim_set_keymap
 vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
 vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
+--Neogit
+keymap("n", "<leader>g", ":Neogit<CR>", opts)
 
 --Float terminal
 keymap("n", "<leader>t", ":FloatermNew<CR>", opts)
