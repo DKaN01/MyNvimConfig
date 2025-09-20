@@ -36,8 +36,8 @@ require("lazy").setup({
         version = "1.*"
    },
 	--Mason package manager
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
+	'mason-org/mason.nvim',
+	{'mason-org/mason-lspconfig.nvim'},
     'neovim/nvim-lspconfig',
 	--Telescope
 	'nvim-telescope/telescope.nvim',
@@ -48,10 +48,8 @@ require("lazy").setup({
     'morhetz/gruvbox',
 	--DownLine
 	'nvim-lualine/lualine.nvim',
-	--Git status
-	--Other
+		--Other
     'rcarriga/nvim-notify',
-    'lewis6991/gitsigns.nvim',
     'numToStr/Comment.nvim',
     --Icons
 	'nvim-tree/nvim-web-devicons',
@@ -105,5 +103,21 @@ require("lazy").setup({
         dependencies = {
             'kevinhwang91/promise-async'
         }
-    }
+    },
+    --gitsigns
+    {'lewis6991/gitsigns.nvim'},
+    --neogit
+    {
+      "NeogitOrg/neogit",
+        dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+        "sindrets/diffview.nvim",        -- optional - Diff integration
+
+        -- Only one of these is needed.
+        "nvim-telescope/telescope.nvim", -- optional
+       "ibhagwan/fzf-lua",              -- optional
+        "echasnovski/mini.pick",         -- optional
+        "folke/snacks.nvim",             -- optional
+    },
+}
 })
