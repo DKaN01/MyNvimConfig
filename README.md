@@ -11,7 +11,6 @@ This simple neovim config
 * Neovim `>=0.11`
 * Git
 * ripgrep
-* lazygit
 
 
 ### How install
