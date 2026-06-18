@@ -10,9 +10,9 @@
 --<leader> + e (normal mode) = Toggle tree
 --<leader> + t (normal mode) = Open float terminal
 --.pm (normal mode) = Open mason (lsp manager)
---\ff = telescope files
---\fg = telescope grep
---gcc (normal mode) = Comment line
+--CTRL + p = telescope files
+-- CTRL + g = telescope grep
+-- gcc (normal mode) = Comment line
 --gc (visual mode) = Comment
 --zR (normal mode) = open folds
 --zM (normal mode) = close folds
