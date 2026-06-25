@@ -1,7 +1,7 @@
 require('blink.cmp').setup({
     keymap = {
         preset = 'default',
-        ['<Tab>'] = {
+        ['<Enter>'] = {
             function(cmp)
                 if cmp.snippet_active() then return cmp.accept()
             else return cmp.select_and_accept() end
@@ -9,6 +9,7 @@ require('blink.cmp').setup({
             'snippet_forward',
             'fallback'
         },
+        ['<Tab>'] = { 'select_next', 'fallback' },
         ['<Up>'] = { 'select_prev', 'fallback' },
         ['<Down>'] = { 'select_next', 'fallback' },
     },
